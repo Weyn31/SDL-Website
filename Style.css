@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.layout-wrapper { /*The entire left side*/
+    display: flex;
+    height: 100vh; /* 100% height */
+    overflow: hidden; /* hidden mean cutoff*/
+}
+
+.sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    height: 100vh; 
+    box-sizing: border-box;
+    flex-shrink: 0; 
+}
+
+.sidebar-header {
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1a202c;
+}
+
+.sub-logo {
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+/* 2nd Row: Navigation Area */
+.sidebar-nav {
+    flex: 1; /* This pushes the footer down by taking up all available space */
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #4a5568;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-nav li:hover {
+    background-color: #f7fafc;
+}
+
+.sidebar-nav li.active {
+    background-color: #ebf4ff;
+    color: #3182ce;
+    font-weight: 600;
+}
+
+.icon {
+    margin-right: 12px;
+}
+
+/* 3rd Row: Footer Area */
+.sidebar-footer {
+    padding-top: 20px;
+    border-top: 1px solid #edf2f7;
+    font-size: 0.75rem;
+    color: #a0aec0;
+}
+
