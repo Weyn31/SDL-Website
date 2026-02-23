@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8"> <!--comment-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="message.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,14 +20,18 @@
     <!--This part should be the nav and link for each choices-->
     <nav class="sidebar-nav">
         <ul>
-            <li class="active">
-            <a href="index.html"><span class="icon">🏠</span> Dashboard</a>
+            <li>
+                <a href="index.html"><span class="icon"><i class="fa-solid fa-house"></i></span> Dashboard</a>
             </li>
-            <a href="Rooms Status.html"><li><span class="icon">🏢</span> Room Status</a></li>
-            <a href="Bill Computation.html"><li><span class="icon">📄</span> Bill Computation</a></li>
-            <a href="History.html"><li><span class="icon">🕒</span> History</a></li>
-            <a href="SMS Automation.html"><li><span class="icon">💬</span> SMS/Email Automation</a></li>
-            <a href="Message Encryption.html"><li><span class="icon">🔒</span> Message Encryption</a></li>
+        
+            <li><a href="Rooms Status.html"><span class="icon">🏢</span> Room Status</a></li>
+            <li><a href="Bill Computation.html"><span class="icon">📄</span> Bill Computation</a></li>
+            <li><a href="History.html"><span class="icon"><i class="fa-solid fa-clock-rotate-left"></i></span> History</a></li>
+            <li><a href="SMS Automation.html"><span class="icon">💬</span> SMS/Email Automation</a></li>
+
+            <li class="active">
+                <a href="Message Encryption.html"><span class="icon"><i class="fa-solid fa-lock"></i></span> Message Encryption</a>
+            </li>
         </ul>
     </nav>
 
@@ -34,5 +39,96 @@
     <div class="sidebar-footer">
         © 2026 VR-Residences Atlas
     </div>
-
 </aside>
+
+    <!--Main Content-->
+    <main class="main-content">
+        <header class="message-header">
+            <h1>Message Encryption/Decryption</h1>
+            <p>Secure your SMS and Email Communication</p>
+        </header>
+
+        <div class="crypto-container">
+            <div class="crypto-card">
+                <div class="card-title">
+                    <span class="lock-icon"><i class="fa-solid fa-lock"></i></span>
+                    <h2>Encrypt Message</h2>
+                </div>
+            
+                <div class="input-field">
+                    <label>Original Message</label>
+                    <textarea placeholder="Enter the message you want to encrypt..."></textarea>
+                </div>
+
+                <div class="input-field">
+                    <label><i class="fa-solid fa-key"></i> Encryption Key (Numeric)</label>
+                    <input type="text" placeholder="Enter encryption key (e.g., 1234)">
+                    <small>Remember this key - you'll need it to decrypt the message</small>
+                </div>
+
+                <button class="crypto-btn">
+                    <span><i class="fa-solid fa-lock"></i></span> Encrypt Message
+                </button>
+            </div>
+
+            <div class="crypto-card">
+                <div class="card-title">
+                    <span class="lock-icon"><i class="fa-solid fa-lock-open"></i></span>
+                    <h2>Decrypt Message</h2>
+                </div>
+
+                <div class="input-field">
+                    <label>Encrypted Message</label>
+                    <textarea placeholder="Enter the encrypted message..."></textarea>
+                </div>
+
+                <div class="input-field">
+                    <label><i class="fa-solid fa-key"></i> Decryption Key (Numeric)</label>
+                    <input type="text" placeholder="Enter decryption key">
+                    <small>Use the same key that was used for encryption</small>
+                </div>
+
+                <button class="crypto-btn">
+                    <span><i class="fa-solid fa-lock-open"></i></span> Decrypt Message
+                </button>
+            </div>
+        </div>
+        
+        <!--Instruction-->
+        <div class="info-container">
+            <div class="info-card">
+                <h3>How It Works</h3>
+                <p>
+                Messages are encrypted using a combination of Caesar cipher and 
+                Base64 encoding. The numeric key shifts each letter in the message, 
+                making it unreadable without the key.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Security Tips</h3>
+                <ul>
+                    <li>Use strong numeric keys (4+ digits)</li>
+                    <li>Share keys through secure channels</li>
+                    <li>Change keys regularly</li>
+                    <li>Don't reuse keys for different messages</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Use Cases</h3>
+                <ul>
+                    <li>Sensitive payment information</li>
+                    <li>Confidential tenant data</li>
+                    <li>Private administrative notes</li>
+                    <li>Secure communication logs</li>
+                </ul>
+            </div>
+        </div>
+    
+
+
+    </main>
+
+</body>
+</html>
