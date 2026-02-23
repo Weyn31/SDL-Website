@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8"> <!--comment-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="Style.css">
     <title>Document</title>
 </head>
 <body>
-    <!--Left Side-->
-    <!--This is for the Logo-->
+    
     <div class="layout-wrapper">
         <aside class="sidebar">
     <div class="sidebar-header">
@@ -16,30 +16,99 @@
         <div class="sub-logo">Atlas Admin</div>
     </div>
 
-    <!--This part should be the nav and link for each choices-->
+    <!--Left Side-->
     <nav class="sidebar-nav">
         <ul>
             <li class="active">
-            <a href="index.html"><span class="icon">🏠</span> Dashboard</a>
+            <a href="index.html"><span class="icon"><i class="fa-solid fa-house"></i></span> Dashboard</a>
             </li>
-            <a href="Rooms Status.html"><li><span class="icon">🏢</span> Room Status</a></li>
-            <a href="Bill Computation.html"><li><span class="icon">📄</span> Bill Computation</a></li>
-            <a href="History.html"><li><span class="icon">🕒</span> History</a></li>
-            <a href="SMS Automation.html"><li><span class="icon">💬</span> SMS/Email Automation</a></li>
-            <a href="Message Encryption.html"><li><span class="icon">🔒</span> Message Encryption</a></li>
+    
+            <li><a href="Rooms Status.html"><span class="icon">🏢</span> Room Status</a></li>
+            <li><a href="Bill Computation.html"><span class="icon">📄</span> Bill Computation</a></li>
+            <li><a href="History.html"><span class="icon"><i class="fa-solid fa-clock-rotate-left"></i></span> History</a></li>
+            <li><a href="SMS Automation.html"><span class="icon">💬</span> SMS/Email Automation</a></li>
+
+            <li>
+                <a href="Message Encryption.html"><span class="icon"><i class="fa-solid fa-lock"></i></span> Message Encryption</a>
+            </li>
         </ul>
     </nav>
+
 
     <!--Footer of the left side-->
     <div class="sidebar-footer">
         © 2026 VR-Residences Atlas
     </div>
 
-    <!--Main Content below-->
+    <!--Main Content part the dashboard right side-->
 </aside>
+    <main class="main-content">
+            <header>
+                <h1>Dashboard</h1>
+                <p>Overview of VR-Residences Atlas</p>
+            </header>
+    
+            <div class="grid-container">
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-label">Total Rooms</span>
+                        <span class="stat-value">12</span>
+                        <span class="stat-desc">8 occupied, 3 vacant</span>
+                    </div>
+                    <div class="stat-icon icon-blue"><i class="fa-solid fa-door-open"></i></div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-label">Occupancy Rate</span>
+                        <span class="stat-value">66.7%</span>
+                        <span class="stat-desc">8 out of 12 rooms</span>
+                    </div>
+                    <div class="stat-icon icon-green"><i class="fa-solid fa-people-group"></i></div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-label">Outstanding Balance</span>
+                        <span class="stat-value">$6,400</span>
+                        <span class="stat-desc">2 overdue, 2 pending</span>
+                    </div>
+                    <div class="stat-icon icon-orange"><i class="fa-solid fa-dollar-sign"></i></div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-label">Maintenance Rooms</span>
+                        <span class="stat-value">1</span>
+                        <span class="stat-desc">Require attention</span>
+                    </div>
+                    <div class="stat-icon icon-red"><i class="fa-solid fa-circle-exclamation"></i></div>
+                </div>
+            </div>
+
+            <!--Balance Section-->
+            <div class="balance-section">
+                <h3>Rooms with Outstanding Balances</h3>
+    
+                <div class="balance-list">
+                    <div class="balance-item">
+                        <div class="item-details">
+                            <span class="room-id">Room 105</span>
+                            <span class="tenant-name">Sarah Johnson</span>
+                        </div>
+                        <div class="item-status">
+                            <span class="amount">$2,800</span>
+                            <span class="last-date">Last: 11/20/2025</span>
+                        </div>
+                </div>
+
+                </div>
+            </div>
+
+    </main>
+    </div>
+
         
-
-
 
 <script src="Script.js"></script> 
 </body>
